@@ -9,7 +9,7 @@ Environment="__YNH_NODE_LOAD_PATH__"
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=__YNH_NODE_LOAD_PATH__ npm start
+ExecStart=__YNH_NPM__ start
 StandardOutput=syslog
 StandardError=syslog
 

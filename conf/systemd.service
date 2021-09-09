@@ -9,7 +9,7 @@ Environment="__YNH_NODE_LOAD_PATH__"
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=__YNH_NPM__ start -- -f __APP_SERVICE_REGISTRATION_PATH__/__APP__.yaml
+ExecStart=__YNH_NPM__ start -- -f __APP__.yaml
 StandardOutput=syslog
 StandardError=syslog
 

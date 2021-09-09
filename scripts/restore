@@ -103,8 +103,7 @@ ynh_backup --src_path="$log_path"
 # REGISTER SYNAPSE APP-SERVICE
 #=================================================
 run_discordas
-mv "$final_path/$app.yaml" $app_service_registration_path/$app.yaml
-chmod g+r "$app_service_registration_path/$app.yaml"
+cp "$final_path/$app.yaml" $app_service_registration_path/$app.yaml
 /opt/yunohost/matrix-$synapse_instance/update_synapse_for_appservice.sh \
     || ynh_die "Synapse can't restart with the appservice configuration"
 

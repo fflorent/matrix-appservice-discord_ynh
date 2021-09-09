@@ -1,4 +1,3 @@
-
 # Packaging your an app, starting from this example
 
 - Copy this app before working on it, using the ['Use this template'](https://github.com/YunoHost/example_ynh/generate) button on the Github repo.

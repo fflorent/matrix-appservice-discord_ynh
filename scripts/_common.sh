@@ -15,7 +15,10 @@ NODEJS_VERSION=14
 install_node_deps() {
     pushd "$final_path"
         ynh_use_nodejs
-        ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production 'npm install typescript@`node -p -e "require(\\"./package.json\\").dependencies.typescript"`'
+        # This black magic aims at extracting the typescript
+        # version of node from devDependencies
+        # to avoid to pull a dependencies black hole...
+        ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production 'npm install typescript@`node -p -e "require(\\"./package.json\\").devDependencies.typescript"`'
         ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production npm install
         # ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production npm run build
     popd

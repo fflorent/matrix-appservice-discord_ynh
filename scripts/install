@@ -25,7 +25,6 @@ final_path=/opt/yunohost/$app
 synapsenumber=$YNH_APP_ARG_SYNAPSENUMBER
 discord_bot_id=$YNH_APP_ARG_DISCORD_BOT_ID
 discord_bot_token=$YNH_APP_ARG_DISCORD_BOT_TOKEN
-privileged_gw_intents=$YNH_PRIVILEGED_GW_INTENTS
 
 if [ $synapsenumber -eq "1" ]
 then

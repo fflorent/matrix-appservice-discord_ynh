@@ -21,7 +21,7 @@ install_node_deps() {
 
 run_discordas() {
     pushd "$final_path"
-        ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production node build/src/discordas.js -r -u "http://localhost:$port" -c config.yaml
+        ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production node build/src/discordas.js -r -u "http://localhost:$port" -c config.yaml -f "$app.yaml"
     popd
 }
 

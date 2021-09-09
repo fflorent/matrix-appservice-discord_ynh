@@ -36,6 +36,7 @@ db_user=$db_name
 phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 datadir=$(ynh_app_setting_get --app=$app --key=datadir)
 synapse_instance=$(ynh_app_setting_get --app=$app --key=synapse_instance)
+app_service_registration_path=$(ynh_app_setting_get --app=$app --key=app_service_registration_path)
 
 #=================================================
 # CHECK IF THE APP CAN BE RESTORED
@@ -102,6 +103,7 @@ ynh_backup --src_path="$log_path"
 # REGISTER SYNAPSE APP-SERVICE
 #=================================================
 run_discordas
+mv "$final_path/$app.yaml" $app_service_registration_path/$app.yaml
 /opt/yunohost/matrix-$synapse_instance/update_synapse_for_appservice.sh \
     || ynh_die "Synapse can't restart with the appservice configuration"
 

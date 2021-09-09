@@ -60,6 +60,19 @@
                 }
             },
             {
+                "name": "privileged_gw_intents",
+                "type": "boolean",
+                "default": false,
+                "ask": {
+                    "en": "Do you want to show Discord users membership and presence in rooms? (requires activating Privileged Gateway intents, see help)",
+                    "fr": "Voulez-vous afficher la liste des membres and leur présence dans les salons ? (nécessite l'activation des \"Privilged Gateway intents\", voir l'aide)"
+                },
+                "help": {
+                    "en": "You need to go to https://discord.com/developers/applications/<bot_id>/bot to learn more about the intents and activate them.",
+                    "fr": "Aller sur https://discord.com/developers/applications/<bot_id>/bot pour en apprendre plus et activer ces options \"Priviliged Gateway Intents\""
+                }
+            },
+            {
                 "name": "discord_bot_token",
                 "type": "password",
                 "ask": {

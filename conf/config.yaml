@@ -33,9 +33,9 @@ bridge:
   # successfully bridged to Discord.
   disableReadReceipts: false
   # Disable Join Leave echos from matrix
-  disableJoinLeaveNotifications: false
+  disableJoinLeaveNotifications: true
   # Disable Invite echos from matrix
-  disableInviteNotifications: false
+  disableInviteNotifications: true
   # Auto-determine the language of code blocks (this can be CPU-intensive)
   determineCodeLanguage: false
 # Authentication configuration for the discord bot.
@@ -45,7 +45,7 @@ auth:
   botToken: "__DISCORD_BOT_TOKEN__"
   # You must enable "Privileged Gateway Intents" in your bot settings on discord.com (e.g. https://discord.com/developers/applications/12345/bot)
   # for this to work
-  usePrivilegedIntents: false
+  usePrivilegedIntents: __PRIVILEDGE_GW_INTENTS__
 logging:
   # What level should the logger output to the console at.
   console: "warn" #silly, verbose, info, http, warn, error, silent

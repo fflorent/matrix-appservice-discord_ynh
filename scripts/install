@@ -25,6 +25,7 @@ final_path=/opt/yunohost/$app
 synapsenumber=$YNH_APP_ARG_SYNAPSENUMBER
 discord_bot_id=$YNH_APP_ARG_DISCORD_BOT_ID
 discord_bot_token=$YNH_APP_ARG_DISCORD_BOT_TOKEN
+privileged_gw_intents=$YNH_PRIVILEGED_GW_INTENTS
 
 if [ $synapsenumber -eq "1" ]
 then
@@ -70,6 +71,7 @@ ynh_app_setting_set --app=$app --key=app_service_registration_path --value=$app_
 ynh_print_OFF
 ynh_app_setting_set --app=$app --key=db_password --value=$db_password
 ynh_print_ON
+ynh_app_setting_set --app=$app --key=synapse_instance --value=$synapse_instance
 
 #=================================================
 # STANDARD MODIFICATIONS
@@ -153,7 +155,7 @@ ynh_add_systemd_config
 #=================================================
 # CREATE LOG DIR
 #=================================================
-mkdir -m 700 "$log_path"
+mkdir -p -m 700 "$log_path"
 chown $app:$app "$log_path"
 
 #=================================================

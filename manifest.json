@@ -61,7 +61,7 @@
             },
             {
                 "name": "discord_bot_token",
-                "type": "string",
+                "type": "password",
                 "ask": {
                     "en": "Give the discord bot Token.",
                     "fr": "Renseignez le jeton (Token) du bot Discord."

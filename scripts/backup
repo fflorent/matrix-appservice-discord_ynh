@@ -58,11 +58,11 @@ ynh_backup --src_path="/etc/systemd/system/$app.service"
 ynh_backup --src_path="$log_path"
 
 #=================================================
-# BACKUP THE MYSQL DATABASE
+# BACKUP THE POSTGRESQL DATABASE
 #=================================================
-ynh_print_info --message="Backing up the MySQL database..."
+ynh_print_info --message="Backing up the PostgresSql database..."
 
-### (However, things like MySQL dumps *do* take some time to run, though the
+### (However, things like POSTGRESQL dumps *do* take some time to run, though the
 ### copy of the generated dump to the archive still happens later)
 
 ynh_psql_dump_db --database="$db_name" > db.sql

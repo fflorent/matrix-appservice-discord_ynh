@@ -94,6 +94,8 @@ ynh_print_ON
 ynh_script_progression --message="Restoring various files..." --time --weight=1
 
 log_path=$(ynh_app_setting_get --app=$app --key=log_path)
+mkdir -m 700 "$log_path"
+chown $app:$app "$log_path"
 ynh_backup --src_path="$log_path"
 
 #=================================================

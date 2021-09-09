@@ -10,6 +10,7 @@ User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
 ExecStart=__YNH_NPM__ start
+ExecStop=__YNH_NPM__ stop
 StandardOutput=syslog
 StandardError=syslog
 
